@@ -1,0 +1,91 @@
+# 🤖 AI-Based Chatbot with Web Interface
+
+This is a mini-project that demonstrates how to build an AI-based chatbot using Python, PHP, and a simple web interface (HTML, CSS, JavaScript). The chatbot can respond to basic inputs and is accessible via browser — even remotely using tools like Ngrok.
+
+---
+
+## 🌟 Features
+
+- 🧠 AI chatbot backend logic (Python)
+- 🌐 Web-based interface using HTML, CSS, JS
+- 🔁 PHP bridges frontend with backend
+- 🧪 Testable on localhost or via public link (Ngrok)
+- 📱 Responsive on mobile & desktop
+- 📦 Easy to deploy using XAMPP
+
+---
+
+## 🗂️ Project Structure
+
+```
+AI-Based Chatbot with Web Interface/
+├── chatbot.py               # Python script for chatbot logic
+├── chatbot_runner.php       # Executes chatbot script from PHP
+├── index.html               # Main chatbot UI
+├── style.css                # Styling for the interface
+├── script.js                # JavaScript for chat behavior
+├── README.md                # Project overview
+├── .gitignore               # (optional) ignores unnecessary files
+```
+
+---
+
+## 🚀 How to Run Locally
+
+### 1. Start XAMPP
+- Run Apache module from the XAMPP Control Panel
+
+### 2. Place Project Folder
+Copy this folder into:
+```
+C:\xampp\htdocs\
+```
+
+### 3. Visit the Chatbot
+Open your browser and go to:
+```
+http://localhost/AI-Based%20Chatbot%20with%20Web%20Interface/index.html
+```
+
+### 4. Test It!
+Type messages like:
+- `hello`
+- `how are you`
+- `tell me a joke`
+- `what time is it`
+- `bye`
+
+---
+
+## 🌍 Access Publicly with Ngrok (optional)
+
+1. Install Ngrok → [https://ngrok.com/download](https://ngrok.com/download)
+2. In command prompt:
+   ```bash
+   ngrok http 80
+   ```
+3. Visit the public link like:
+   ```
+   https://abc123.ngrok.io/AI-Based%20Chatbot%20with%20Web%20Interface/index.html
+   ```
+
+✅ Now you can access the chatbot from **any device** on any network!
+
+---
+
+## 🧠 Future Improvements (Optional)
+
+- Use NLP libraries (like `nltk`, `transformers`)
+- Add chat history storage (database or file)
+- Include voice input/output
+- Deploy to a public PHP hosting platform
+
+---
+
+## 🧑‍💻 Developed By
+
+**Sayali Ganesh Shinde**  
+Computer Engineering Student | AI Enthusiast | Web Developer  
+GitHub: [@SayaligShinde](https://github.com/SayaligShinde)
+
+---
