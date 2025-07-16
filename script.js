@@ -6,17 +6,21 @@ function sendMessage() {
     const chatBox = document.getElementById("chatBox");
     chatBox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
 
-    fetch("chatbot_runner.php", {
+    fetch("https://ai-based-chatbot-with-web-interface.onrender.com/chat", {
         method: "POST",
         headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
+            "Content-Type": "application/json"
         },
-        body: "message=" + encodeURIComponent(message)
+        body: JSON.stringify({ message: message })
     })
-    .then(response => response.text())
-    .then(reply => {
-        chatBox.innerHTML += `<p><strong>Bot:</strong> ${reply}</p>`;
+    .then(response => response.json())
+    .then(data => {
+        chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
         chatBox.scrollTop = chatBox.scrollHeight;
+    })
+    .catch(error => {
+        chatBox.innerHTML += `<p><strong>Bot:</strong> Sorry, something went wrong.</p>`;
+        console.error("Error:", error);
     });
 
     input.value = "";
